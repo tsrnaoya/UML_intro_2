@@ -1,0 +1,7 @@
+@startuml 演習２－４
+rectangle 予約システム {
+    usecase キャンペーン期間
+    usecase キャンペーン
+}
+キャンペーン .> キャンペーン期間 : <<extend>>
+@enduml
