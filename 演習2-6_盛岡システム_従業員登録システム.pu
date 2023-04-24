@@ -1,15 +1,15 @@
 @startuml 盛岡システム（株）
     ' left to right direction
-    actor 社員 as d
-    actor 人事担当者 as a #DDDDDD;line:black;line.bold;
+    actor 社員 as 3
+    actor 人事担当者 as 1 #DDDDDD;line:black;line.bold;
     rectangle 従業員登録システム {
-    usecase 従業員登録する as b
-    usecase 社員情報を参照する as c
-    usecase 社員情報を変更する as e
+    usecase 従業員登録する as 2
+    usecase 社員情報を参照する as 4
+    usecase 社員情報を変更する as 5
     }
-    a --> b
-    d --> c
-    a --> e
+    1 --> 2
+    3 --> 4
+    1 --> 5
 
 
 
