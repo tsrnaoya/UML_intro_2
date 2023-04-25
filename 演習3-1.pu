@@ -30,6 +30,6 @@ class 貸出{
 hide 顧客 circle
 hide 車 circle
 hide 予約 circle
-hide 空車 circle
+hide 空車リスト circle
 hide 貸出 circle
 @enduml
