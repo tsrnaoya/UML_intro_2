@@ -1,8 +1,8 @@
 @startuml 車両貸し出しシステム
-skinparam ClassAttributeFontSize 0
+skinparam ClassAttributeIconSize 0
 class 顧客{
     - 氏名:String
-    - 電話番号:String
+    - 電話番号:int
     - 郵便番号:int
     - 住所:String
     ---
@@ -16,16 +16,16 @@ class 車{
 
 }
 class 予約{
-    - 予約番号:String
-    - 管理番号:String
-    - 日付:String
+    - 予約番号:int
+    - 管理番号:int
+    - 日付:data
     - 顧客ID:String
 }
 class 空車リスト{
     - 管理番号:String
 }
 class 貸出{
-    - 貸出番号:String
+    - 貸出番号:int
 }
 hide 顧客 circle
 hide 車 circle
