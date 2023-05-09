@@ -1,0 +1,12 @@
+@startuml 演習３－２
+left to right direction
+class 医師 {}
+class 患者 {}
+class 医局 {
+    - 内科
+    - 外科
+    - 小児科
+}
+医師 "1"-->"1" 患者:診察 >
+医師 "1"--"*" 医局
+@enduml
