@@ -1,0 +1,46 @@
+@startuml 演習３－７
+left to right direction
+object 重要顧客 {
+
+}
+object "<u>高橋洋平: 顧客</u>" as k1 {
+氏名=高橋洋平
+住所
+}
+object "<u>髙田理恵: 顧客</u>" as k2 {
+氏名=髙田理恵
+住所
+}
+object "<u>: 顧客</u>" as k2 {
+氏名=髙田理恵
+住所
+}
+object "<u>テレビ: 商品</u>" as s1 {
+商品名=テレビ
+型番=V12345
+}
+object "<u>冷蔵庫: 商品</u>" as s2 {
+商品名=冷蔵庫
+型番=R8765
+}
+object "<u>高橋洋平: 注文</u>" as t1 {
+注文日=11月21日
+数量=2
+}
+object "<u>高橋洋平: 注文２</u>" as t2 {
+注文日=11月21日
+数量=1
+}
+object "<u>髙田理恵: 注文</u>" as t3 {
+注文日=12月23日
+数量=1
+}
+重要顧客 -- k1
+k1 -- t1
+t1 -- s1
+k2 -- t3
+t3 -- s2
+k1 -- t2
+t2 --s2
+
+@enduml
