@@ -1,0 +1,22 @@
+@startuml 演習４－４
+hide footbox
+Actor 受注係
+participant "<u>バウンダリ:注文登録画面</u>" as ba <<boundary>>
+participant "<u>エンティティ:商品</u>" as e1 <<entity>>
+activate 受注係
+    受注係 -> ba:注文情報を確認
+    activate ba
+    activate e1
+        ba -> e1:商品情報表示
+        ba <-- e1:商品情報取得
+        deactivate e1
+        ba -> ba:商品登録
+        activate ba
+        deactivate ba
+        deactivate ba
+    受注係 -> ba:注文情報を確認
+        activate ba
+        create "<u>エンティティ:注文</u>" as e2 <<entity>>
+            ba --> e2:<<create>>
+            activate e2
+@enduml

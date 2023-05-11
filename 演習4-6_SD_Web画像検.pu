@@ -1,0 +1,25 @@
+@startuml 演習４－６
+hide footbox
+Actor "<u>:ユーザ</u>" as user
+participant ":ブラウザ" as browser
+participant ":Webサーバー" as webserver
+participant ":画像サーバー" as imgserver
+activate user
+    user -> browser:リンクボタン
+    activate browser
+        browser -> webserver:ファイル名を伝達
+            activate webserver
+                webserver -> imgserver:画像検索
+                activate imgserver
+                    imgserver -> imgserver:検索
+                    activate imgserver
+                    deactivate imgserver
+                    webserver <-- imgserver:検索結果
+                deactivate imgserver
+            webserver -> webserver:閲覧可能状態
+            activate webserver
+            browser <-- webserver:画像ファイルを再生
+            deactivate webserver
+    user <-- browser:画像を表示
+    deactivate browser
+@enduml

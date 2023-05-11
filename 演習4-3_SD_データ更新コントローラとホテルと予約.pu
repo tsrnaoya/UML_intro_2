@@ -1,0 +1,10 @@
+@startuml 演習４－３
+hide footbox
+participant "<u>controller:データ更新コントローラ</u>" as c1
+participant "<u>hotel:ホテル</u>" as h1
+activate c1
+    c1 -> h1:予約
+    activate h1
+        h1 -> h1:予約オブジェクト作成
+    c1 <-- h1:予約登録
+@enduml
