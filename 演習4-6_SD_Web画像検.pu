@@ -9,13 +9,13 @@ activate user
     activate browser
         browser -> webserver:ファイル名を伝達
             activate webserver
-                webserver -> imgserver:画像検索
-                activate imgserver
-                    imgserver -> imgserver:検索
-                    activate imgserver
-                    deactivate imgserver
-                    webserver <-- imgserver:検索結果
-                deactivate imgserver
+            webserver -> imgserver:画像検索
+            activate imgserver
+            imgserver -> imgserver:検索
+            activate imgserver
+            deactivate imgserver
+            webserver <-- imgserver:検索結果
+            deactivate imgserver
             webserver -> webserver:閲覧可能状態
             activate webserver
             browser <-- webserver:画像ファイルを再生
