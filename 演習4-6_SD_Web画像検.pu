@@ -1,4 +1,4 @@
-@startuml 演習４－６
+@startuml 演習4-6_SD_Web画像検索
 hide footbox
 Actor "<u>:ユーザ</u>" as user
 participant ":ブラウザ" as browser
