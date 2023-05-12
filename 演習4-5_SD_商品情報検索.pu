@@ -1,4 +1,4 @@
-@startuml 演習４－５
+@startuml 演習4-5_SD_商品情報検索
 hide footbox
 Actor "<u>:会員</u>" as member
 participant ":商品検索画面" as search <<boundary>>

@@ -1,4 +1,4 @@
-@startuml 演習４－４
+@startuml 演習4-4_SD_商品注文
 hide footbox
 Actor 受注係
 participant "<u>バウンダリ:注文登録画面</u>" as ba <<boundary>>
