@@ -1,24 +1,25 @@
 @startuml 演習４－６
 hide footbox
-Actor "<u>:会員</u>" as member
-participant ":商品検索画面" as search <<boundary>>
-participant ":商品検索コントローラ" as control  <<control>>
-activate member
-    member -> search:注文情報を確認
-    activate search
-        search -> control:商品情報表示
-        activate control
-            create "<u>:商品</u>" as goods <<entity>>
-            control --> goods:<<create>>生成()
-            create "<u>:商品カテゴリ</u>" as category <<entity>>
-            loop 商品カテゴリ数
-            control --> category:<<create>>生成()
-            control -> goods:商品カテゴリを設定
-            activate goods
-            deactivate goods
-            end
-            search <-- control:商品情報
-            deactivate control
-            search -> search:商品情報表示
-            activate search
-@enduml 
+Actor "<u>:ユーザ</u>" as user
+participant ":ブラウザ" as browser
+participant ":Webサーバー" as webserver
+participant ":画像サーバー" as imgserver
+activate user
+    user -> browser:リンクボタン
+    activate browser
+        browser -> webserver:ファイル名を伝達
+            activate webserver
+                webserver -> imgserver:画像検索
+                activate imgserver
+                    imgserver -> imgserver:検索
+                    activate imgserver
+                    deactivate imgserver
+                    webserver <-- imgserver:検索結果
+                deactivate imgserver
+            webserver -> webserver:閲覧可能状態
+            activate webserver
+            browser <-- webserver:画像ファイルを再生
+            deactivate webserver
+    user <-- browser:画像を表示
+    deactivate browser
+@enduml
