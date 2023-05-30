@@ -1,0 +1,18 @@
+@startuml
+title カレーライス
+|ヒト|
+start
+:食材の準備;
+fork
+ :野菜を切る;
+  :野菜を炒める;
+fork again
+ :肉を炒める;
+end fork
+:水を入れる;
+:煮込む;
+:ルーを入れる;
+:再度煮込む;
+:盛り付け;
+stop
+@enduml
