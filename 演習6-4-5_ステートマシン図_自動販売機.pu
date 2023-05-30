@@ -1,0 +1,14 @@
+@startuml 演習６－４－５
+left to right direction
+state 自動販売機 {
+    state entry <<entryPoint>>
+    state exit <<exitPoint>>
+    
+    entry --> 料金装置 : 料金投入待ち
+    料金装置 --> ボタン : ボタン選択待ち
+    ボタン --> ベンダー装置 : ドリンク排出中
+    ベンダー装置 --> exit 
+}
+[*] --> entry
+exit --> [*]
+@enduml

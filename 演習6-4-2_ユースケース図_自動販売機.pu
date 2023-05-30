@@ -1,0 +1,15 @@
+@startuml 演習６－４－２
+left to right direction
+actor 客 as customer#DDDDDD;line:black;line.bold;
+actor ベンダー as vendor#DDDDDD;line:black;line.bold;
+rectangle 自動販売機 {
+    usecase ボタン as button
+    usecase 料金装置 as price 
+    usecase ベンダー装置 as vendormachine
+}
+customer --> button
+customer --> price
+customer --> vendormachine
+price <-- vendor
+
+@enduml
