@@ -1,0 +1,15 @@
+@startuml 演習６－５－３
+left to right direction
+[*] -right-> 電源OFF
+電源OFF --> 電源ON : スイッチを入れる
+state 電源ON {
+    右旋回 <-- 左旋回 : ラインに乗る
+    右旋回 --> 左旋回 : ラインを外れる
+    右旋回 : 左モーターON
+    右旋回 : 右モーターOFF
+    左旋回 : 左モーターOFF
+    左旋回 : 右モーターON
+}
+電源OFF <-- 電源ON : スイッチを切る
+電源OFF -right-> [*]
+@enduml
